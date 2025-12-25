@@ -1,6 +1,6 @@
 import { defineConfig } from 'vite'
 import UnoCSS from 'unocss/vite'
-import { presetIcons, presetWind3 } from 'unocss'
+import { presetIcons, presetWind3, presetWind4 } from 'unocss'
 import theme from './theme.json'
 
 export default defineConfig({
@@ -21,20 +21,16 @@ export default defineConfig({
         colors: theme.colors
       },
       presets: [
-        // presetWind4({
-        //   preflights: {
-        //     // reset: true,
-        //     // theme: true,
-        //     property: {
-        //       parent: '@layer properties',
-        //       selector: ':where(*, ::before, ::after)'
-        //     }
-        //     // property: {
-        //     //   parent: false
-        //     // }
-        //   }
-        // }),
-        presetWind3(),
+        presetWind4({
+          preflights: {
+            "theme": {
+              'mode': true
+            },
+            property: {
+              parent: false
+            },
+          }
+        }),
         presetIcons({
           scale: 1
         }),

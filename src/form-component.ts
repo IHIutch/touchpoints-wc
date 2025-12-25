@@ -1,7 +1,5 @@
 import { LitElement, html, css, unsafeCSS } from 'lit';
 import { customElement, property, state } from 'lit/decorators.js';
-// @ts-expect-error
-import reset from '@unocss/reset/tailwind-v4.css?raw'
 
 @customElement('form-component')
 export class FormComponent extends LitElement {
@@ -12,7 +10,6 @@ export class FormComponent extends LitElement {
 
 
   static styles = css`
-    ${unsafeCSS(reset)}
     @unocss-placeholder
   `
 
@@ -25,7 +22,7 @@ export class FormComponent extends LitElement {
       <div>
         
           <div class=${this.formState !== 'success' ? 'hidden' : ""}>
-            <div role="status" class="@container bg-green-cool-5 border-l-8 border-l-green-cool-40v">
+            <div role="status" class="bg-green-cool-5 border-l-8 border-l-green-cool-40v">
               <div class="py-2 pl-10 pr-4 relative">
                 <div class="absolute left-2">
                   <div class="i-material-symbols:check-circle size-6"></div>
@@ -40,14 +37,14 @@ export class FormComponent extends LitElement {
             <div class="flex gap-2">
               <button
                 type="button"
-                class="rounded cursor-pointer font-bold leading-none text-blue-60v px-5 py-3 bg-transparent ring-inset ring-2 ring-blue-60v hover:ring-blue-warm-70v hover:text-blue-warm-70v active:ring-blue-warm-80v active:text-blue-warm-80v focus:outline focus:outline-4 focus:outline-offset-4 focus:outline-blue-40v"
+                class="rounded cursor-pointer font-bold leading-none text-blue-60v px-5 py-3 bg-transparent ring-inset ring-2 ring-blue-60v hover:ring-blue-warm-70v hover:text-blue-warm-70v active:ring-blue-warm-80v active:text-blue-warm-80v focus:outline-4 focus:outline-offset-4 focus:outline-blue-40v"
                 @click=${() => this.handleSubmit('yes')}
               >
                 ${this.yesLabel}
               </button>
               <button
                 type="button"
-                class="rounded cursor-pointer font-bold leading-none text-blue-60v px-5 py-3 bg-transparent ring-inset ring-2 ring-blue-60v hover:ring-blue-warm-70v hover:text-blue-warm-70v active:ring-blue-warm-80v active:text-blue-warm-80v focus:outline focus:outline-4 focus:outline-offset-4 focus:outline-blue-40v"
+                class="rounded cursor-pointer font-bold leading-none text-blue-60v px-5 py-3 bg-transparent ring-inset ring-2 ring-blue-60v hover:ring-blue-warm-70v hover:text-blue-warm-70v active:ring-blue-warm-80v active:text-blue-warm-80v focus:outline-4 focus:outline-offset-4 focus:outline-blue-40v"
                 @click=${() => this.handleSubmit('no')}
               >
                 ${this.noLabel}
