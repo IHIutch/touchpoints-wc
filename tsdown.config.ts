@@ -1,7 +1,7 @@
 import { defineConfig } from 'tsdown/config'
 import { presetIcons, presetWind3 } from 'unocss'
 import UnoCSS from 'unocss/vite'
-import theme from './theme.json'
+import theme from './theme.json' with { type: "json" }
 
 export default defineConfig({
   entry: ['./src/index.ts'],
