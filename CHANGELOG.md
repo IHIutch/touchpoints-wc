@@ -1,5 +1,11 @@
 # touchpoints-wc
 
+## 0.3.0
+
+### Minor Changes
+
+- [`2c6927b`](https://github.com/IHIutch/touchpoints-wc/commit/2c6927b5ff702bb447d76b344dcfcc247d877444) Thanks [@IHIutch](https://github.com/IHIutch)! - Fix styles
+
 ## 0.2.0
 
 ### Minor Changes
