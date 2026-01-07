@@ -1,6 +1,6 @@
 {
   "name": "touchpoints-wc",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "type": "module",
   "description": "TypeScript Web Components with Form Submission",
   "exports": {
