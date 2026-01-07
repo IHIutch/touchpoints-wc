@@ -4,7 +4,7 @@ import resetStyle from './reset.style';
 
 @customElement('touchpoints-yesno')
 export class TouchpointsYesNo extends LitElement {
-  static css = [
+  static override styles = [
     resetStyle,
     css`@unocss-placeholder`
   ]

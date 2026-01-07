@@ -4,6 +4,13 @@ import { presetIcons, presetWind3 } from 'unocss'
 import theme from './theme.json'
 
 export default defineConfig({
+  build: {
+    lib: {
+      entry: './src/index.ts',
+      fileName: 'index',
+      formats: ['es'],
+    },
+  },
   plugins: [
     UnoCSS({
       mode: 'shadow-dom',
