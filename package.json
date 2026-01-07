@@ -28,6 +28,7 @@
     "url": "git+https://github.com/IHIutch/touchpoints-wc.git"
   },
   "homepage": "https://github.com/IHIutch/touchpoints-wc",
+  "packageManager": "pnpm@10.9.0",
   "scripts": {
     "dev": "vite",
     "build": "tsdown",
