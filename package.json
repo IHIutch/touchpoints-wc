@@ -1,28 +1,48 @@
 {
   "name": "touchpoints-wc",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "type": "module",
   "description": "TypeScript Web Components with Form Submission",
-  "main": "dist/form-component.js",
+  "types": "dist/index.d.mts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.mts",
+      "import": "./dist/index.mjs",
+      "default": "./dist/index.mjs"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "keywords": [
+    "web-components",
+    "lit",
+    "typescript",
+    "form",
+    "touchpoints"
+  ],
+  "author": "",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IHIutch/touchpoints-wc.git"
+  },
+  "homepage": "https://github.com/IHIutch/touchpoints-wc",
   "scripts": {
     "dev": "vite",
-    "build": "tsc && vite build",
+    "build": "tsdown",
     "preview": "vite preview",
-    "checksize": "vite build && cat dist/form-component.js | gzip -9 | wc -c"
+    "publint": "publint"
   },
   "dependencies": {
     "@iconify-json/material-symbols": "^1.2.50",
-    "@unocss/preset-wind3": "^66.5.10",
-    "@unocss/reset": "^66.5.10",
-    "lit": "^3.3.2"
+    "lit": "^3.3.2",
+    "unocss": "^66.5.10"
   },
   "devDependencies": {
-    "@unocss/preset-attributify": "^66.5.10",
-    "@unocss/preset-icons": "^66.5.10",
-    "@unocss/preset-typography": "^66.5.10",
-    "@unocss/preset-wind4": "^66.5.10",
+    "publint": "^0.3.16",
+    "tsdown": "0.19.0-beta.3",
     "typescript": "^5.9.3",
-    "unocss": "^66.5.10",
     "vite": "^7.3.0"
   }
 }

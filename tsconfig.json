@@ -1,22 +1,43 @@
 {
   "compilerOptions": {
-    "target": "ES2020",
-    "useDefineForClassFields": false,
-    "lib": ["ES2020", "DOM", "DOM.Iterable"],
+    // Modern JavaScript support
+    "target": "es2020",
+    "lib": [
+      "es2020",
+      "DOM",
+      "DOM.Iterable"
+    ],
     "module": "ESNext",
-    "skipLibCheck": true,
     "moduleResolution": "bundler",
-    "allowImportingTsExtensions": true,
     "resolveJsonModule": true,
-    "isolatedModules": true,
-    "noEmit": true,
+    // Type checking
     "strict": true,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
-    "allowSyntheticDefaultImports": true,
+    "noImplicitAny": true,
+    "noImplicitOverride": true,
+    "noImplicitReturns": true,
+    "noImplicitThis": true,
+    "noUncheckedIndexedAccess": true,
+    // Output
+    "declaration": true,
+    "declarationMap": true,
+    "sourceMap": true,
+    // Module interop
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "isolatedModules": true,
+    "verbatimModuleSyntax": true,
+    // Other
+    "skipLibCheck": true,
+    /* Web Components specific */
     "experimentalDecorators": true,
-    "emitDecoratorMetadata": true
+    "useDefineForClassFields": false,
+    "emitDecoratorMetadata": true,
   },
-  "include": ["src/**/*", "vite.config.ts"]
+  "exclude": [
+    "node_modules",
+    "dist",
+    "**/node_modules",
+    "**/dist"
+  ]
 }

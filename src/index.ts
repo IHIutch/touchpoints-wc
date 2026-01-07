@@ -1,1 +1,1 @@
-export { FormComponent } from './form-component.js';
+export * from './touchpoints-yesno.js';
