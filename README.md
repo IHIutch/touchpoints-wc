@@ -93,6 +93,51 @@ pnpm build
 pnpm publint
 ```
 
+## Release Management
+
+This project uses [Changesets](https://changesets.dev/) for version management and publishing. Changesets help maintain semantic versioning and generate changelogs automatically.
+
+### Creating a Changeset
+
+When you make changes that should trigger a release, create a changeset:
+
+```bash
+# Create a new changeset
+pnpm changeset
+```
+
+This will prompt you to:
+1. Select which packages have changed (for monorepos)
+2. Choose the type of change:
+   - **patch**: Bug fixes, small improvements
+   - **minor**: New features, backwards compatible changes  
+   - **major**: Breaking changes
+3. Write a summary of the changes
+
+### Release Process
+
+The release process is automated via GitHub Actions:
+
+1. **During Development**: Create changesets for your changes
+2. **Release PR**: When changesets are merged to `main`, a "Release PR" is automatically created
+3. **Publishing**: Merging the Release PR will:
+   - Update versions in `package.json`
+   - Generate/update `CHANGELOG.md`
+   - Create a GitHub release
+   - Publish to npm
+
+### Manual Release Commands
+
+For manual releases or testing:
+
+```bash
+# Update package versions based on changesets
+pnpm changeset:version
+
+# Build and publish to npm
+pnpm changeset:publish
+```
+
 ## Technical Details
 
 - Built with [Lit](https://lit.dev/) for reactive web components
